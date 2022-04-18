@@ -81,9 +81,7 @@ impl<'a, const N: usize, const R: core::ops::Range<usize>> std::ops::Mul<f64> fo
         for i in R {
             rv[i - R.start] = self.vec.data[i] * other;
         }
-        Vector {
-            data : rv,
-        }
+        Vector::new(rv)
     }
 }
 
